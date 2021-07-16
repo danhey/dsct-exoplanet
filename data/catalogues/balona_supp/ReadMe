@@ -1,0 +1,107 @@
+J/MNRAS          Pulsating A-F stars in the Kepler field          (Balona,2018) 
+================================================================================
+Gaia luminosities of pulsating A-F stars in the Kepler field
+    Balona L.A.
+   <MNRAS (2018)>
+================================================================================
+ADC_Keywords: Stars, variable ; Stars, delta Scuti; stars: oscillations
+
+Abstract:
+
+    The light curves and periodograms of over 20000 stars in the Kepler 
+    field were visually examined in order to detect the various classes
+    of variables.  Among these are 2570 stars of the delta Scuti and
+    gamma Doradus types.  Parallaxes from Gaia DR2 were obtained for
+    2476 of these variables, from which precise stellar luminosities were
+    derived.  The effective temperatures of stars with effective
+    temperatures less than 6500 K were obtained from the Huber et al.
+    2014ApJS..211....2H.  For hotter stars, 144 K was added to the KIC values 
+    in accordance with Balona et al. 2015MNRAS.452.3073B.  Interstellar 
+    absorption in the V band was obtained by linear interpolation of the 3D
+    table by Gontcharov 2017AstL...43..472G.  For stars more distant than
+    1200 pc, the absorption was assumed to follow the simple model described
+    in Brown et al. 2011AJ....142..112B adjusted to give the same value at
+    1200 pc.  The de-reddening procedure to the KIC griz values followed the 
+    procedure outlined in Pinsonneault et al. 2012ApJS..199...30P, from which 
+    the unreddened r magnitude was obtained. The absolute r magnitude was then
+    obtained from the Gaia DR2 parallax (Gaia Collaboration, 
+    2018arXiv180409365G) and using the bolometric correction in the r band 
+    from Castelli and Kurucz, 2004astro.ph..5087C) the absolute bolometric 
+    magnitude was derived.  The 2476 stars for which luminosities could be 
+    calculated are listed in Table 1.
+
+    Luminosities could not be obtained for some of the delta Scuti and gamma 
+    Doradus stars identified in the Kepler field, either because the
+    parallax was not measured or because the effective temperature could not
+    be estimated.  These stars are listed in Table 2.
+
+    Code names were developed to describe the variability class of each star
+    as follows:
+
+    DSCT:  delta Scuti star
+    GDOR:  gamma Doradus star
+    GDORA: gamma Doradus star with asymmetric light curve.
+    GDORS: gamma Doradus star with symmetric light curve.
+    GDORM: gamma Doradus star with multiple frequencies.
+
+    In addition  to these basic types, evidence was found for other types of
+    variation in the same star as follows:
+
+    ROT:   Rotational variable
+    EB:    Eclipsing binary
+    HRTB:  Heartbeat binary
+    MAIA:  High frequencies in a star between the red edge of the beta Cep
+           variables and the blue edge of the delta Scuti variables.
+    SOLR:  Solar-like frequency comb seen in periodogram.
+    SPB:   Low frequencies in a star cooler than the red edge of the SPB
+           variables and hotter than the blue edge of the gamma Dor variables.
+
+Description:
+    KIC numbers, variability type and stellar parameters for delta Scuti and
+    gamma Doradus stars in the Kepler field.
+
+File Summary:
+--------------------------------------------------------------------------------
+ FileName   Lrecl  Records   Explanations
+--------------------------------------------------------------------------------
+ReadMe         80        .   This file
+table1.dat     73     2476   Stars with precise Gaia luminosities.
+table2.dat     51       94   Stars with photometric luminosities.
+--------------------------------------------------------------------------------
+Note on table1.dat, table2.dat: The effective temperature and its standard 
+deviation is from the Huber et al. 2014ApJS..211....2H for Teff < 6500.  For 
+hotter stars Teff is from the KIC, but increased by 144 K in accordance 
+with Balona et al. 2015MNRAS.452.3073B.
+Note on table2.dat: The luminosity is calculated from Teff and the KIC stellar
+radius.  The standard deviation in log(L/L_sun) is about 0.4 dex.
+
+Byte-by-byte Description of file: table1.dat
+--------------------------------------------------------------------------------
+   Bytes Format Units   Label     Explanations
+--------------------------------------------------------------------------------
+   1-  9  I9    ---     KIC       KIC identification number
+  11- 26  A16           Type      Variability classification.
+  27- 34  F8.4  mas     Plx       Parallax in milli-arcseconds.
+  35- 42  F8.4  mas     e_Plx     Error in the parallax in milli-arcseconds.
+  43- 48  I6    K       Teff      Effective temperature in degrees K.       
+  49- 54  I6    K       e_Teff    Error in the effective temperature in K.  
+  55- 59  F5.2  mag     A_V       Interstellar absorbtion in V.
+  60- 66  F8.4  dex     LogL      Logarithm of the luminosity in solar units.       58  A1    ---   u_Per       [)] Uncertainty flag on Per
+  67- 73  F7.3  dex     e_LogL    Error in Log(L/L_sun) in dex.
+--------------------------------------------------------------------------------
+
+Byte-by-byte Description of file: table2.dat
+--------------------------------------------------------------------------------
+   Bytes Format Units   Label     Explanations
+--------------------------------------------------------------------------------
+   1-  9  I9    ---     KIC       KIC identification number
+  11- 26  A16           Type      Variability classification.
+  27- 34  F8.3  mag     Kp        Kepler magnitude.
+  35- 40  I6    K       Teff      Effective temperature in degrees K.       
+  41- 45  I5    K       eTeff     Error in effective temperature in K.
+  46- 51  F6.2  dex     LogL      Logarithm of the luminosity in solar units.       58  A1    ---   u_Per       [)] Uncertainty flag on Per
+--------------------------------------------------------------------------------
+
+
+================================================================================
+(End)                                                       
